@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte saint valentin</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="form-carte">
+        <div id="progressbar">
+            <div id="bar"></div>
+        </div>
+        <div class="carte gift">
+            <h1>Joyeuse Saint valentin</h1>
+            <p>A  toi qui illumines ma vie,
+                voici une carte magique rien que pour toi ❤️ </p>
+                <button onclick="next()">Découvrir le poème</button>
+            </div>
+           <div class="poeme gift hide">
+            <p>
+    En ce jour des cœurs, je pense à toi, lumière de mes nuits.  
+    Ton sourire éclaire mes pas comme une étoile fidèle.  
+    Tes yeux sont des océans où je me perds avec bonheur.  
+    Mon cœur bat au rythme de ton nom, chaque instant.  
+    Joyeuse Saint-Valentin, toi qui rends ma vie belle.  
+</p>
+    <button onclick="next()">Suivant</button>
+</div>
+<div class="coeur-parent hide gift ">
+
+    <div class="coeur">
+        
+        <div class="element-coeur" onclick="myHeart()">
+            <p>Click me!</p>
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1.24264 8.24264L8 15L14.7574 8.24264C15.553 7.44699 16 6.36786 16 5.24264V5.05234C16 2.8143 14.1857 1 11.9477 1C10.7166 1 9.55233 1.55959 8.78331 2.52086L8 3.5L7.21669 2.52086C6.44767 1.55959 5.28338 1 4.05234 1C1.8143 1 0 2.8143 0 5.05234V5.24264C0 6.36786 0.44699 7.44699 1.24264 8.24264Z" fill="Currentcolor"></path> </g></svg>
+        </div>
+        <button onclick="next()">Suivant</button>
+    </div>
+</div>
+<div class="photo gift hide">
+    <div class="flex">
+        <img src="../carrousel_page/assets/image/voiture/bmw.png" alt="">
+        <p>Toi mon combat</p>
+        <button onclick="next()">Suivant</button>
+    </div>
+</div>
+<div class="souvenir  hide gift">
+    <h1>Nos souvenirs</h1>
+    <div class="imgsouvenir">
+        <div class="slide">
+            <div class="card">
+                <img src="../carrousel_page/assets/image/kawasaki/red.png" alt="">
+                <p>09/01/2023</p>
+            </div>
+            <div class="card">
+                <img src="../carrousel_page/assets/image/r3/rose.png" alt="">
+                <p>11/12/2025</p>
+            </div>
+            <div class="card">
+                <img src="../carrousel_page/assets/image/r2/orange.png" alt="">
+                <p>06/01/2026</p>
+            </div>
+        </div>
+    </div>
+    <button onclick="fermer()">Fermer</button>
+    </div>
+    </div>
+    <div class="paper" onclick="opene()">
+        <div class="heart">
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1.24264 8.24264L8 15L14.7574 8.24264C15.553 7.44699 16 6.36786 16 5.24264V5.05234C16 2.8143 14.1857 1 11.9477 1C10.7166 1 9.55233 1.55959 8.78331 2.52086L8 3.5L7.21669 2.52086C6.44767 1.55959 5.28338 1 4.05234 1C1.8143 1 0 2.8143 0 5.05234V5.24264C0 6.36786 0.44699 7.44699 1.24264 8.24264Z" fill="Currentcolor"></path> </g></svg>
+        </div>
+    </div>
+    <div class="haut"></div>
+    <div class="parent-heart"></div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

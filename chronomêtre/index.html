@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronometre</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="form-chrono">
+        <h2>Chronometre simple <svg fill="#fff5f5" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>chronometer</title> <path d="M28.054 18.571c0 6.933-5.62 12.554-12.554 12.554s-12.554-5.621-12.554-12.554c0-6.722 5.286-12.192 11.927-12.521v-2.166h-0.941c-0.555 0-1.005-0.45-1.005-1.005s0.45-1.004 1.005-1.004h3.012c0.555 0 1.005 0.449 1.005 1.004s-0.45 1.005-1.005 1.005h-1.066v2.153c6.757 0.2 12.176 5.729 12.176 12.534zM14.873 9.909v-2.291c-3.109 0.176-5.866 1.64-7.766 3.858l1.653 1.653-0.71 0.711-1.565-1.566c-1.274 1.798-2.032 3.987-2.032 6.359 0 0.106 0.015 0.251 0.015 0.251h2.432v1.005h-2.36c0.244 2.052 1.057 3.987 2.268 5.534l1.243-1.243 0.71 0.71-1.296 1.297c1.879 1.996 4.488 3.297 7.408 3.462v-2.729h1.004v2.742c2.989-0.102 5.67-1.393 7.599-3.41l-1.424-1.424 0.71-0.71 1.377 1.376c1.24-1.56 2.074-3.521 2.322-5.604h-2.55v-1.005h2.621c0.003-0.104 0.016-0.145 0.016-0.251 0-2.438-0.8-4.681-2.138-6.505l-1.648 1.648-0.71-0.71 1.726-1.725c-1.947-2.203-4.753-3.631-7.9-3.737v2.304h-1.005zM15.939 18.885h3.516c0.277 0 0.502 0.226 0.502 0.502 0 0.277-0.225 0.503-0.502 0.503h-4.018c-0.277 0-0.502-0.226-0.502-0.503v-6.967c0-0.277 0.225-0.502 0.502-0.502s0.502 0.225 0.502 0.502v6.465z"></path> </g></svg> </h2>
+        <p>00:00:00</p>
+        <div class="but">
+            <button onclick="start()" class="commencer"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16.6582 9.28638C18.098 10.1862 18.8178 10.6361 19.0647 11.2122C19.2803 11.7152 19.2803 12.2847 19.0647 12.7878C18.8178 13.3638 18.098 13.8137 16.6582 14.7136L9.896 18.94C8.29805 19.9387 7.49907 20.4381 6.83973 20.385C6.26501 20.3388 5.73818 20.0469 5.3944 19.584C5 19.053 5 18.1108 5 16.2264V7.77357C5 5.88919 5 4.94701 5.3944 4.41598C5.73818 3.9531 6.26501 3.66111 6.83973 3.6149C7.49907 3.5619 8.29805 4.06126 9.896 5.05998L16.6582 9.28638Z" stroke="#000000" stroke-width="2" stroke-linejoin="round"></path> </g></svg></button>
+            <button onclick="pause()" class="pause"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 5V19M16 5V19" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
+            <button onclick="arret()" class="arret"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C10.22 21 8.47991 20.4722 6.99987 19.4832C5.51983 18.4943 4.36628 17.0887 3.68509 15.4442C3.0039 13.7996 2.82567 11.99 3.17294 10.2442C3.5202 8.49836 4.37737 6.89472 5.63604 5.63604C6.89472 4.37737 8.49836 3.5202 10.2442 3.17294C11.99 2.82567 13.7996 3.0039 15.4442 3.68509C17.0887 4.36628 18.4943 5.51983 19.4832 6.99987C20.4722 8.47991 21 10.22 21 12C21 14.387 20.0518 16.6761 18.364 18.364C16.6761 20.0518 14.387 21 12 21ZM12 4.5C10.5166 4.5 9.0666 4.93987 7.83323 5.76398C6.59986 6.58809 5.63856 7.75943 5.07091 9.12988C4.50325 10.5003 4.35473 12.0083 4.64411 13.4632C4.9335 14.918 5.64781 16.2544 6.6967 17.3033C7.7456 18.3522 9.08197 19.0665 10.5368 19.3559C11.9917 19.6453 13.4997 19.4968 14.8701 18.9291C16.2406 18.3614 17.4119 17.4001 18.236 16.1668C19.0601 14.9334 19.5 13.4834 19.5 12C19.5 10.0109 18.7098 8.10323 17.3033 6.6967C15.8968 5.29018 13.9891 4.5 12 4.5Z" fill="#000000"></path> <path d="M14.5 8H9.5C8.67157 8 8 8.67157 8 9.5V14.5C8 15.3284 8.67157 16 9.5 16H14.5C15.3284 16 16 15.3284 16 14.5V9.5C16 8.67157 15.3284 8 14.5 8Z" fill="#000000"></path> </g></svg></button>
+            
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

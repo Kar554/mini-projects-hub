@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(248, 149, 166);
+}
+.form-carte{
+    position: absolute;
+    z-index: -1;
+    text-align: center;
+    top:50%;
+    min-height: 400px;
+    /* transform: translateY(-43%); */
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 4px black;
+    border-radius: 20px;
+    background: white;
+}
+@keyframes gift{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.form-carte h1{
+    text-transform: capitalize;
+    font-size: 45px;
+    text-shadow: 0 5px 10px rgb(248, 149, 166);
+    color: rgb(236, 47, 78);
+    margin: 20px 0;
+}
+.form-carte p{
+    margin: 20px 0;
+    font-size: 20px;
+}
+button{
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    background: rgb(236, 47, 78);
+    color: white;
+    border-radius: 20px;
+}
+.paper{
+    border-radius: 15px;
+    z-index: 5;
+    border-bottom: 200px solid rgb(231, 12, 85);
+    border-left: 300px solid rgb(192, 24, 80);
+    border-right: 300px solid rgb(192, 24, 80);
+    border-top: 200px solid rgb(231, 12, 85);
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.haut{
+    display: none;
+    position: absolute;
+    bottom: 65%;
+    z-index: 1;
+    border-bottom: 170px solid rgb(192, 24, 80);
+    border-top: 170px solid transparent;
+    border-left: 302px solid transparent;
+    border-right: 302px solid transparent;
+}
+@keyframes fadecart {
+    0%{
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+    50%{
+        top: 10%;
+        transform: translateY(-10%);
+        z-index: 2;
+    }
+    100%{
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+    }
+}
+@keyframes closecart {
+    0%{
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+    }
+    50%{
+        top: 10%;
+        transform: translateY(-10%);
+        z-index: 2;
+    }
+    100%{
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+}
+.heart{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+svg{
+    width: 34px;
+    color: palevioletred;
+}
+.hide{
+    display: none;
+}
+.poeme{
+    margin: 20px 0;
+}
+.poeme p{
+    font-size: 30px;    
+    text-align: justify;
+    font-style: italic;
+}
+.poeme button,.souvenir button{
+    width: 50%;
+    margin-top: 30px;
+}
+#progressbar{
+    width: 100%;
+    height: 10px;
+    background: rgb(248, 149, 166);
+    border-radius: 15px;
+    overflow: hidden;
+}
+#bar{
+    width: 0%;
+    background: rgb(212, 20, 84);
+    height: 100%;
+}
+.coeur{
+    display: flex;
+    flex-direction: column;
+}
+.element-coeur{
+    position: relative;
+}
+.coeur svg{
+    cursor: pointer;
+    width: 300px;
+    animation: heart 1.4s infinite;
+}
+@keyframes heart {
+    from{
+        transform: scale(0.7);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.element-coeur p{
+    top: 35%;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%) translateY(-35%);
+    position: absolute;
+    z-index: 10;
+}
+.photo{
+    margin: 30px 0;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.photo img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+.imgsouvenir{
+    max-width: 300px;
+    margin: 30px auto;
+    overflow: hidden;
+    display: flex;
+    border-radius: 20px;
+    justify-content: flex-start;
+    box-shadow: 0 0 5px rgb(212, 20, 84);
+}
+.slide{
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    transform: translateX(-0px);
+}
+.card{
+    /* max-width: 150px; */
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px gray;
+    margin: 20px 0;
+}
+.card img{
+    width: 200px;
+    height: 150px;
+}
+.parent-heart{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    z-index: -100;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(50,1fr);
+}
+.divheart{
+    font-size: 20px;
+}
+
+
+@media (max-width:476px) {
+    .paper{
+    width: 100%;
+    border-bottom: 200px solid rgb(231, 12, 85);
+    border-left: 185px solid rgb(192, 24, 80);
+    border-right: 185px solid rgb(192, 24, 80);
+    border-top: 200px solid rgb(231, 12, 85);
+    }
+    .haut{
+        display: none;
+        border-left: 159px solid transparent;
+        bottom: 72% !important;
+    border-right: 159px solid transparent;
+    
+    }
+    /* .form-carte{
+        max-width: 100%;
+        min-height: 0px;
+        max-height: 300px;
+    }
+    h1,p{
+        font-size: 15px !important;
+    }
+   .element-coeur svg{
+    width: 150px;
+    }
+    .haut{
+        display: none;
+        border-left: 189px solid transparent;
+        bottom: 75% !important;
+    border-right: 189px solid transparent;
+    }
+    img{
+        width: 150px !important;
+        height: 100px !important;
+    }
+   .imgsouvenir{
+    width: 200px;
+    height: 150px;
+    margin: 10px auto;
+   }  */
+}
+@media (max-width:361px) {
+    .paper{
+        border-top: 220px solid rgb(231, 12, 85);
+        border-bottom: 220px solid rgb(231, 12, 85);
+        border-left: 175px solid rgb(192, 24, 80);
+        border-right: 175px solid rgb(192, 24, 80);
+    }
+    .haut{
+        display: none;
+        border-left: 159px solid transparent;
+        bottom: 75% !important;
+    border-right: 159px solid transparent;
+    }
+}
