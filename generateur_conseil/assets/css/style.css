@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: rgb(12, 111, 192);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form-conseil{
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 15px;
+    background: white;
+    animation: fadeForm 0.5s ease-in;
+}
+@keyframes fadeForm {
+    from{
+        transform: scale(0) rotate(180deg);
+        /* transform: rotate(180deg); */
+    }
+    to{
+        transform: scale(1) rotate(360deg);
+        /* transform: rotate(360deg); */
+    }
+}
+button{
+    width: 100%;
+    background: rgb(12, 111, 192);
+    padding: 20px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+button:hover::before{
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.315);
+    top: 0;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.content{
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    min-width: 300px;
+    border: 1px solid rgb(111, 218, 245);
+    position: relative;
+    animation: fadeForm 0.7s ease-in;
+}
+.content h2{
+    background: white;
+    position: absolute;
+    font-size: 20px;
+    color: rgb(111, 218, 245);
+    top: -18px;
+    left: 5px;
+}

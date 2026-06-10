@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('../image/pexels-alex-andrews-271121-816608.jpg');
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100vh;
+}
+.form-gradient{
+    background: transparent;
+    background: rgba(255, 255, 255, 0.158);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+.affichage{
+    background: linear-gradient(to left top,#977DFE,#6878FF);
+    width: 100%;
+    height: 30vh;
+    border-radius: 10px;
+}
+.but{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+button{
+    width: 100%;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.parent{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.element{
+    display: flex;
+    flex-direction: column;
+}
+.color{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+input{
+    cursor: pointer;
+    position: relative;
+   width: 60px;
+   border: none;
+}
+input:hover::before{
+    content: "";
+    background: #0001;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+select{
+    resize: none;
+    outline: none;
+    border-radius: 10px;
+    background: transparent;
+    padding:10px 50px;
+    border-color: white;
+    color: white;
+}
+option{
+    color: black;
+}
+.ramdom{
+    background: rgb(109, 3, 109);
+    color: white;
+}
+.copy{
+    color: white;
+    background: rgb(3, 3, 146);
+}
+.ramdom:hover{
+    background: rgb(32, 1, 32);
+}
+.copy:hover{
+    background: rgb(2, 2, 94);
+}
+.code{
+    width: 100%;
+    height: 10vh;
+    margin: 20px 0;
+    font-size: 16px;
+    padding-top: 10px;
+    border: 1px solid gray;
+    color: white;
+    background: rgba(0, 0, 0, 0.479);
+}
+@media (max-width:768px) {
+    .form-gradient{
+        max-width: 330px;
+    }
+    .parent{
+        flex-direction: column;
+    }
+}
