@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: antiquewhite;
+}
+.form-jeu{
+    max-width: 550px;
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    padding: 30px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
+    align-items: center;
+    box-shadow: 0 0 15px rgb(253, 217, 170);
+    position: relative;
+    animation: fadeForm 1.3s ease-in;
+}
+@keyframes fadeForm {
+    from{
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.word{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: brown;
+    font-weight: bold;
+}
+.changebtn{
+    display: none;
+}
+button{
+    padding: 20px;
+    border: none;
+    color: white;
+    width: 50%;
+    border-radius: 20px;
+    cursor: pointer;
+    background: orange;
+}
+button:hover{
+    opacity: 0.8;
+}
+.champ{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+input{
+    outline: none;
+    text-align: center;
+    padding:0 20px;
+    font-size: 25px;
+    color: brown;
+    flex: 1;
+    border-radius: 20px;
+    border: 1px solid pink;
+}
+span{
+    margin-left: 5px;
+}
+.vali{
+    background: green;
+    flex: 0 0 30%;
+}
+.apparition{
+    text-align: center;
+    font-size: 30px;
+    display: none;
+}
+.apparition a{
+    text-decoration: none;
+    color: red;
+}
+.apparition a:hover{
+    text-decoration: underline;
+}
+p{
+    font-size: 20px;
+}
+.current{
+    text-align: center;
+    position: absolute;
+    top: 0;
+    background: white;
+    padding: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+@media (max-width:576px) {
+    .form-jeu{
+        max-width: 100%;
+        height: 100vh;
+    }
+input{
+    font-size: 15px;
+}
+}

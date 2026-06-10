@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minuteur</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="overlay">
+        <div class="card">
+           <div class="ferme" onclick="ferme()"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path d="M7 17L16.8995 7.10051" stroke="#03fe78" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7 7.00001L16.8995 16.8995" stroke="#d803fe" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></div>
+    <h2>Comment utiliser le minuteur</h2>
+    <p>Pour activer le minuteur et voir les champs :</p>
+    <ul>
+        <li>Cliquez sur le bloc rose (minuteur rouge). Le curseur se transformera en <strong>pointer</strong> pour indiquer qu’il est interactif.</li>
+        <li>Les champs de minute et seconde apparaîtront et deviendront modifiables.</li>
+        <li>Appuyez sur le bouton <strong>Refresh</strong> <em>deux fois</em> pour lancer le minuteur :
+            <ul>
+                <li>La première fois, il se met en pause et prépare le compte à rebours.</li>
+                <li>La deuxième fois, il démarre correctement.</li>
+            </ul>
+        </li>
+        <li>Important : ne cliquez pas trop rapidement sur Refresh, cela pourrait provoquer une boucle infinie.</li>
+    </ul>
+    <p>Le minuteur affichera le temps restant sous la forme <strong>mm:ss</strong> dans le bloc noir central.</p>
+</div>
+
+    </div>
+    <div class="overline">
+        </div>
+    <div class="minu">
+<input type="number" id="min" min="0" max="90" placeholder="min" disabled value="0">
+<div class="point">:</div>
+        <input type="number" id="sec" min="0" max="59" disabled placeholder="sec" value="30">
+    </div>
+    <div class="conic">
+
+        <div class="form-minuteur">
+            <h1>Pomodoro</h1>
+            <p class="output">00:30</p>
+            <button onclick="refresh()">Refresh</button>
+        </div>
+    </div>
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

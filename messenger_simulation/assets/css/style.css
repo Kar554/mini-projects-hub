@@ -1,0 +1,593 @@
+:root{
+    --sombre: rgb(228, 226, 226);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Courier New', Courier, monospace ;
+    background: rgb(228, 226, 226);
+}
+.form-container{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.parent {
+    border-radius: 5px; 
+    min-height: 400px;
+    background: white; 
+    height: 100vh; 
+    display: flex;
+     flex-direction: column;
+     margin-bottom: 20px;
+ }
+.title{
+    font-size: 30px;
+    font-weight: bold;
+}
+.dot,.new-message{
+    border-radius: 50%;
+    background: rgb(228, 226, 226);
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    margin:30px 20px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.flex{
+    display: flex;
+    gap: 5px;
+}
+.search{
+    margin: 10px;
+    position: relative;
+
+}
+.search svg{
+    width: 22px;
+}
+input{
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    padding-left: 33px;
+    outline: none;
+    background: rgb(228, 226, 226);
+}
+.search-icon{
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    position: absolute;
+}
+.categorie{
+    display: flex;
+    gap: 5px;
+    margin: 10px;
+}
+.cat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    min-width: 90px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.cat:hover{
+    background:rgb(228, 226, 226);
+}
+.cat.active{
+    background: rgba(17, 20, 187, 0.096);
+    color: blue;
+}.container-message{
+    background: rgba(17, 20, 187, 0.096);
+    /* padding: 1px; */
+    margin: 10px;
+    /* width: 100%; */
+    max-width: 100%;
+    max-height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 5px;
+    align-items: center;
+    cursor: pointer;
+    gap: 15px;
+}
+.container-message:hover{
+    background: rgba(10, 14, 219, 0.171);
+}
+.container-message img{
+    width: 70px;
+    margin-left: 5px;
+    height: 70px;
+    border-radius: 50%;
+
+}
+.name h1{
+    font-size: 20px;
+}
+.name p{
+    font-size: 13px;
+    color: gray;
+}
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: white;
+    height: 80px;
+}
+header ul{
+    display: flex;
+    gap: 10px;list-style: none;
+}
+.home{
+    background: var(--sombre);
+}
+.mob{
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.onglet{
+    display: flex;
+    gap: 10px;
+}
+header li a:hover{
+    background: var(--sombre);
+}
+.menu,.mob-div,header li a{
+    background: var(--sombre);
+    width: 60px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border-radius: 50%;
+}
+.mob{
+    display: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border-radius: 50%;
+     background: var(--sombre);
+    width: 60px;
+}
+.onglet img{
+    border: 2px solid green;
+    cursor: pointer;
+    width: 60px;
+    cursor: pointer;
+    height: 60px;
+    border-radius: 50%;
+}
+header li a{
+    color: black;
+    text-decoration: none;
+    background: transparent;
+}
+.face{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo svg{
+    cursor: pointer;
+    width: 50px;
+}
+.header{
+    /* border-bottom: 1px solid gray; */
+    border-bottom: 1px solid rgb(228, 226, 226);
+    box-shadow: 0 0 10px rgb(228, 226, 226);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.profil{
+    display: flex;
+    align-items: center;
+}
+.retour{
+    width: 40px;
+    height: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.name.profile{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.retour:hover{
+    background: var(--sombre);
+}
+.profile{
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 10px;
+}
+.profile:hover{
+    background: var(--sombre);
+}
+.name.profile p{
+    font-size: 12px;
+}
+.profil img{
+    border-radius: 50%;
+}
+.contact{
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 5px;
+}
+.phone{
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+.phone:hover{
+    background: var(--sombre);
+}
+.banner{
+    width: 100%;
+    margin: 30px 0;
+    margin-bottom: 100%;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.banner img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+.banner h1{
+    font-weight: bold;
+    font-size: 25px;
+}
+.banner p{
+    margin: 10px;
+    margin-top: 30px;
+    color: gray;
+}
+.banner a{
+    text-decoration: none;
+}
+.banner a:hover{
+    text-decoration: underline;
+}
+.message-me{
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: right;
+}
+.el,.flexe{
+    background: rgb(40, 40, 209);
+    padding: 10px;
+    color: white;
+    max-width: 60%;
+    margin: 0;
+    border-radius: 20px;
+}
+.flexe{
+    background: transparent;
+    padding: 0;
+    margin-left: 10px;
+}
+.dot.cache{
+    display: none;
+}
+.message-you{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    margin: 20px 0;
+}
+.you,.el{
+    min-width: 100px;
+    text-align: center;
+}
+.you{
+    border-radius: 20px;
+    padding: 10px;
+    background: var(--sombre);
+    color: black;
+}
+span{
+    display: flex;
+    justify-content: center;
+    color: gray;
+}
+.flexe{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.flexe img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.footer-banner {
+     display: flex; gap: 10px;
+      padding: 10px; background: white; align-items: center; 
+      border-top: 1px solid #ddd; position: sticky;margin: 0;
+       bottom: 0; }
+
+.form-container-message { flex: 1;  
+    overflow-y: auto;
+      padding-bottom: 60px; }
+.icon {
+    flex: 0 0 10%;   
+    display: flex;
+    gap: 10px;
+}
+.icon div,.like,.emoji{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.icon div:hover,.like:hover{
+    background: var(--sombre);
+}
+.emoji:hover{
+    background: rgb(172, 170, 170);
+}
+.messenge-input {
+    flex: 1; 
+    position: relative;
+}
+
+svg{
+    width: 18px;
+}
+.messenge-input input {
+    width: 100%;
+    padding: 8px;
+}
+
+.emoji{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+.like {
+    flex: 0 0 5%;
+    text-align: center;
+}
+
+.dote{
+    width: 20ch;
+    font-family: monospace;
+    bottom: 20px;
+    font-size: 30px;
+    bottom: 55px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 1s steps(10) infinite
+    alternate-reverse;
+    
+}
+.parent.thirst{
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    text-align: center;
+}
+.form-info{
+    margin-top: 10px;
+}
+.ferme svg{
+    width: 30px;
+}
+.contact-info{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.contact-info .phone{
+    width: 70px;
+    height: 70px;
+}
+.contact-info svg{
+    width: 50px;
+}
+.form-info img{
+    border: 3px solid gray;
+    border-radius: 50%;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+}
+@keyframes fadeForm {
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.ferme{
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+.desktop{
+    display: block;
+}
+.mobile{
+    display: none;
+}
+@keyframes typing {
+    from{
+        width: 0ch;
+    }
+}
+@media (max-width:1680px) {
+    .banner{
+        margin-bottom: 20px;
+    }
+    .parent.thirst{
+        display: none;
+    }
+    .dote{
+        font-size: 30px;
+    }
+    svg{
+        width: 30px;
+    }
+}
+/**/
+@media (max-width:800px) {
+    .cat.cache{
+        display: none;
+    }
+    .desktop{
+    display: none;
+}
+.mobile{
+    display: block;
+}
+    .dote{
+        font-size: 20px;
+    }
+    .parent.first{
+        width: 100%;
+        display: none;
+    }
+     svg{
+        width: 20px;
+    }
+    header ul{
+        display: none;
+    }
+    .desk{
+        display: none;
+    }
+    .mob{
+        display: flex;
+    }
+    .retour{
+        display: flex;
+    }
+    .dot.cache{
+    display: flex;
+}
+.form-info img{
+    width: 60px;
+    height: 60px;
+}
+.contact-info .phone{
+    width: 30px;
+    height: 30px;
+}
+.contact-info svg{
+    width: 20px;
+}
+    .parent.thirst{
+        max-width: 100%;
+    }
+}
+@media (min-width:900px) {
+    .parent.thirst{
+        max-width: 100%;
+        display: none;
+    }
+        .desktop{
+    display: none;
+}
+.mobile{
+    display: block;
+}
+     svg{
+        width: 30px;
+    }
+    .container-message{
+            pointer-events: none;
+    }
+    .parent.second{
+        flex: 1;
+    }
+}
+@media (min-width:2000px) {
+    .ferme{
+        display: none;
+    }
+    .parent.thirst{
+            max-width: 450px;
+            display: flex;
+    }
+       .desktop{
+    display: block;
+}
+.mobile{
+  display: none;
+}
+    /* .form-container{
+        justify-content: center;
+    } */
+     .parent.second{
+        flex: 1;
+     }
+     .logo svg{
+        width: 60px;
+     }
+     svg{
+        width: 40px;
+    }
+}
+@media (max-width:320px) {
+    svg{
+        width: 10px;
+    }
+}

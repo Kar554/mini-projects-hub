@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jeu de lettre caché</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="current"></div>
+    <div class="form-jeu">
+        <p id="message">Le jeu est est lancé</p>
+        <div class="word"></div>
+        <div class="champ">
+            <input type="text" maxlength="1" placeholder="Une seule lettre..." id="input">
+            <button class="vali" onclick="valider()">Valider</button>
+        </div>
+        <p class="chance">Vous avez 5 chances pour gagnés</p>
+        <button class="changebtn" onclick="refre()">Changer de mot</button>
+        <div class="apparition">
+            <p class="lose">Vous avez perdu le mot est: <div class="mot"></div><a href="" onclick="window.location.href='index.html'">Réesayer</a></p>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
