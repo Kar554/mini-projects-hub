@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu tic tac toe</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="form-morpion">
+        <h1>Tic Tac Toe</h1>
+        <div class="player-content">
+            <div class="player active">
+                <h1>Player X:</h1>
+               <span> 0 </span>
+            </div>
+            <div class="ia">
+                <h1>player O:</h1>
+               <span> 0</span>
+
+               </div>
+        </div>
+        <p id="message"></p>
+        <div class="case-parent">
+      <div class="case" data-arg="1"></div>
+<div class="case" data-arg="2"></div>
+<div class="case" data-arg="3"></div>
+<div class="case" data-arg="4"></div>
+<div class="case" data-arg="5"></div>
+<div class="case" data-arg="6"></div>
+<div class="case" data-arg="7"></div>
+<div class="case" data-arg="8"></div>
+<div class="case" data-arg="9"></div>
+    </div>
+    <div class="reset">
+        <button class="resetBtn" onclick="again()">Recommencer</button>
+    </div>
+   </div>
+
+   <script src="./assets/js/script.js"></script>
+</body>
+</html>

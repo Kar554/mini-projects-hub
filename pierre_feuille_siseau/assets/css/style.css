@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: rgb(29, 28, 28);
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.form-content,.jeu{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid gray;
+    box-shadow: 0 0 25px gray;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    animation: fadeForm 0.3s ease-in;
+    
+}
+@keyframes fadeForm {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.essaie{
+    font-size: 17px;
+    border-radius: 20px;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    width: 50%;
+    animation: fadeIn 2s ease-in;
+}
+.essaie:hover{
+    opacity: 0.5;
+}
+.but{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+button{
+    font-size: 40px;
+    padding: 30px;
+    width: 100%;
+    cursor: pointer;
+}
+#player{
+   font-size: 70px;
+   transform: rotate(-270deg);
+ 
+}
+
+#robot{
+    font-size: 70px;
+   transform: rotate(270deg);
+}
+.first{
+    background: rgb(14, 11, 11);
+    border: 1px solid gray;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    
+}
+.first:hover{
+    background: rgb(37, 37, 37);
+}
+.messages{
+    animation: fadeIn 1.3s ease-in;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.overflow{
+    background: rgba(0, 0, 0, 0.411);
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+    position: absolute;
+}
+.jeu{
+ position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+@media (max-width:576px) {
+    .form-content{
+        height: 100vh;
+    }
+}

@@ -1,0 +1,219 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg,#000,rgb(80,36,182),rgb(133,31,94));
+    font-family: Arial, sans-serif;
+}
+/* .zip-splash{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    z-index: 9999;
+    overflow: hidden;
+} */
+
+/* panneaux
+.zip{
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    transition: transform 1.2s cubic-bezier(.77,0,.18,1);
+}
+
+.zip-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: #111;
+    text-align: center;
+    transition: opacity 0.8s ease;
+}
+
+.zip-splash.hide-text .zip-text{
+    opacity: 0;
+}
+
+.zip-splash.open .left{
+    transform: translateX(-100%);
+}
+.zip-splash.open .right{
+    transform: translateX(100%);
+}
+
+.app{
+    opacity: 0;
+    transform: scale(.97);
+    transition: 0.6s ease;
+}
+
+.app.show{
+    opacity: 1;
+    transform: scale(1);
+} */
+
+h1{
+    margin-bottom: 20px;
+    color: transparent;
+    background: linear-gradient(150deg, blue, red);
+    background-clip: text;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* CONTENEUR PRINCIPAL */
+.content-todo{
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    padding: 30px 20px 60px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: FadeForm 1.3s ease-in-out;
+}
+@keyframes FadeForm {
+    from{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+/* div du champ + bouton */
+.box{
+    position: relative;
+    width: 100%;
+    animation: open 2.2s ease-in-out;
+}
+@keyframes open {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+/* champ de to do */
+.box input{
+    width: 100%;
+    padding: 18px 20px;
+    padding-right: 90px;
+    border: none;
+    outline: none;
+    background: #00000015;
+    border-radius: 20px;
+}
+
+.box button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 36px;
+    border: none;
+    border-radius: 20px;
+    background: orangered;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.container{
+    width: 100%;
+    margin-top: 25px;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+
+.container-task{
+    padding: 0;
+    margin: 0;
+}
+
+.container-task li{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    cursor: pointer;
+    background: orangered;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.container-task input[type="radio"]{
+    cursor: pointer;
+}
+
+.container-task span{
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    word-break: break-word;
+}
+.delete{
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+}
+@media (max-width:768px) {
+    .content-todo{
+        max-width: 350px;
+    }
+    .container{
+    max-height: 20vh;
+}
+}
+input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+li {
+    transition: all 0.6s ease;
+}
+
+li.fade-out {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+.effaceall{
+    background: orangered;
+    border: none;
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: 60%;
+    cursor: pointer;
+    border-radius: 20px;
+    color: whitesmoke;
+}

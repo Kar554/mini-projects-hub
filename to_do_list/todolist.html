@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- <div class="zip-splash" id="zip">
+    <div class="zip left"></div>
+    <div class="zip right"></div>
+    <div class="zip-text">
+        <span>Desmond</span> - <span>Dev</span>
+    </div>
+</div> -->
+
+<div class="content-todo">
+    <h1>TO-DO LIST</h1>
+
+    <div class="box">
+        <input type="text" id="input" placeholder="Ajouter une tâche…">
+        <button type="button" onclick="add()">+</button>
+    </div>
+<button class="effaceall" onclick="deleteall()">Tout effacer</button>
+    <div class="container">
+        <ul class="container-task">
+            <li class="test-li">
+                <input type="checkbox">
+                <span>exemple de tâche</span>
+                <div class="delete">✕</div>
+            </li>
+        </ul>
+    </div>
+    
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
