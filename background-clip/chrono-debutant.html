@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+        }
+        .chrono{
+            height: 200px;
+            box-shadow: 0 0 10px white;
+            padding: 20px;
+            max-width: 300px;
+            width: 100%;
+            border-radius: 8px;
+        }
+        .display{
+            padding: 20px;
+            color: white;
+            text-align: center;
+            border: 1px solid white;
+        }
+        .but{
+            margin: 20px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+        button{
+            padding: 10px;
+            cursor: pointer;
+            width: 300px;
+            border: none;
+            color: white;
+            border-radius: 10px;
+        }
+        .r{
+            background: limegreen;
+        }
+        .p{
+            background: rgb(194, 194, 8);
+        }
+        .s{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="chrono">
+        <p>Chronometre simple</p>
+        <h1 class="display">00:00:00</h1>
+        <div class="but">
+            <button class="r">Start</button>
+            <button class="p">Pause</button>
+            <button class="s">Stop</button>
+        </div>
+    </div>
+</body>
+</html>

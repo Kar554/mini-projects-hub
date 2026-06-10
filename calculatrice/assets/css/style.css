@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background:linear-gradient(100deg,black,white);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.form-calculator{
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 30px;
+    background: black;
+}
+em{
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    color: white;
+}
+.form-calculator p{
+    position: absolute;
+    font-size: 25px;
+    right: 10px;
+    bottom: -22px;
+    
+}
+.egale{
+    margin-top: 5px;
+    background: lime;
+    border: none;
+}
+.egale:hover{
+    background: green;
+}
+.del{
+    background: rgb(245, 159, 0);
+}
+.del:hover{
+    background: rgba(255, 166, 0, 0.623);
+}
+.clear{
+    border: none;
+    background: red;
+}
+.clear:hover{
+    background: rgba(255, 0, 0, 0.603);
+}
+.champ{
+    position: relative;
+}
+.form-calculator input{
+    width: 100%;
+    padding: 20px;
+    outline: none;
+    margin-bottom:10px;
+}
+.element{
+    display: flex;
+    width: 100%;
+    gap:2px;
+    justify-content: space-between;
+}
+button{
+    width: 100%;
+    padding: 20px;
+    background: rgba(104, 102, 102, 0.692) ;
+    color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    /* border: none; */
+}
+button:hover{
+    background: gray;
+}
+@media (max-width:768px) {
+    .form-calculator{
+        width: 100%;
+        max-width: 80%;
+        
+    }
+}
