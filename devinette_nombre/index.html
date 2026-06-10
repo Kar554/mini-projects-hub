@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de devinette de nombre</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="form-content">
+        <h2>Entrer un nombre entre 1 et 19</h2>
+        <p id="message"></p> 
+        <div class="champ">
+        <input type="number" id="input">
+        <button onclick="verifier()" class="btn-verifie">Verifier</button>
+        </div>
+    </div>
+    <div class="succes">
+        <div class="overflow">
+           <h4></h2>
+           <button class="again" onclick="btne()">Recommencer</button>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

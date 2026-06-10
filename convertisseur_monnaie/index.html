@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Convertisseur universelle de monnaie</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Convertisseur de Monnaie</h1>
+        <p>Convertir toute sorte de monnaie en un clic.</p>
+        <input type="number" id="input" placeholder="Monnaie à convertir...">
+        <div class="selecteur">
+      <select id="device1">
+    <option value="t">Monnaie à convertir</option>
+    <option value="USD">Dollar américain (USD)</option>
+    <option value="EUR">Euro (EUR)</option>
+    <option value="GBP">Livre sterling (GBP)</option>
+    <option value="JPY">Yen japonais (JPY)</option>
+    <option value="CNY">Yuan chinois (CNY)</option>
+    <option value="CAD">Dollar canadien (CAD)</option>
+    <option value="AUD">Dollar australien (AUD)</option>
+    <option value="CHF">Franc suisse (CHF)</option>
+    <option value="INR">Roupie indienne (INR)</option>
+    <option value="RUB">Rouble russe (RUB)</option>
+    <option value="XOF">Franc CFA BCEAO (XOF)</option>
+    <option value="XAF">Franc CFA BEAC (XAF)</option>
+</select>
+
+        <select id="device2">
+    <option value="t">Convertir en quelle monnaie</option>
+    <option value="USD">Dollar américain (USD)</option>
+    <option value="EUR">Euro (EUR)</option>
+    <option value="GBP">Livre sterling (GBP)</option>
+    <option value="JPY">Yen japonais (JPY)</option>
+    <option value="CNY">Yuan chinois (CNY)</option>
+    <option value="CAD">Dollar canadien (CAD)</option>
+    <option value="AUD">Dollar australien (AUD)</option>
+    <option value="CHF">Franc suisse (CHF)</option>
+    <option value="INR">Roupie indienne (INR)</option>
+    <option value="RUB">Rouble russe (RUB)</option>
+    <option value="XOF">Franc CFA BCEAO (XOF)</option>
+    <option value="XAF">Franc CFA BEAC (XAF)</option>
+</select>
+</div>
+
+        <button onclick="convertir()" class="">Convertir</button>
+        <output id="result"></output>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

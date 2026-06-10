@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur de casse</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="form-casse">
+        <h1>Convertisseur de casse</h1>
+        <div class="champ">
+            <textarea name="" id="input" placeholder="ecrivez votre phrase..."></textarea>
+            <button class="copibtn" onclick="copi()">Copier</button>
+            <div class="mot"></div>
+            <div class="micro" onclick="micro()">audio </div>
+            <div class="lettre"></div>
+        </div>
+        <div class="function">
+       <button class="normal" onclick="normal()">normal</button>
+       <button class="maj" onclick="maj()">majuscule</button>
+<button class="min" onclick="minu()">minuscule</button>
+<div class="chevrondown" onclick="chevron()">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="white"></rect> <path d="M17 9.5L12 14.5L7 9.5" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+</div>
+<div class="chevrontop">
+   <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" enable-background="new 0 0 52 52" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.4,34.2l20.5-20.7c0.6-0.6,1.6-0.6,2.2,0l20.5,20.7c0.6,0.6,0.6,1.6,0,2.2l-2.2,2.2 c-0.6,0.6-1.6,0.6-2.2,0L27.1,22.2c-0.6-0.6-1.6-0.6-2.2,0L8.8,38.5c-0.6,0.6-1.6,0.6-2.2,0l-2.2-2.2C3.9,35.7,3.9,34.8,4.4,34.2z"></path> </g></svg>
+</div>
+<button class="bold" onclick="gras()">Gras</button>
+<button class="italique" onclick="ita()">Italique</button>
+<button class="capitalize" onclick="capita()">capitaliser</button>
+<button onclick="sup()">Supprimer</button>
+</div>
+<div class="zoomout" onclick="zoomout()">
+    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M0 0h48v48H0z" fill="none"></path> <g id="Shopicon"> <g> <polygon points="39.999,37.171 29.414,26.586 26.586,29.414 37.171,39.999 29.999,39.999 29.999,43.999 43.999,43.999 43.999,29.999 39.999,29.999 "></polygon> <polygon points="30,8 37.172,8 26.586,18.586 29.414,21.414 40,10.828 40,18 44,18 44,4 30,4 "></polygon> <polygon points="7.999,10.827 18.586,21.414 21.414,18.586 10.827,7.999 17.999,7.999 17.999,3.999 3.999,3.999 3.999,17.999 7.999,17.999 "></polygon> <polygon points="18,40 10.907,40 21.414,29.493 18.585,26.665 8,37.251 8,30.002 4,30.002 4,44 18,44 "></polygon> </g> </g> </g></svg>
+</div>
+<div class="zoomin" onclick="zoomin()">
+
+    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M0 0h48v48H0z" fill="none"></path> <g id="Shopicon"> <g> <polygon points="41,31 41,27 27,27 27,41 31,41 31,33.828 40.585,43.413 43.413,40.585 33.828,31 "></polygon> <polygon points="31,14.172 31,7 27,7 27,21 41,21 41,17 33.828,17 43.414,7.414 40.586,4.586 "></polygon> <polygon points="7,17 7,21 21,21 21,7 17,7 17,14.172 7.413,4.585 4.585,7.413 14.172,17 "></polygon> <polygon points="7.416,43.416 17,33.832 17,41 21,41 21,27 7,27 7,31 14.175,31 4.588,40.588 "></polygon> </g> </g> </g></svg>
+</div>
+    </div>
+    
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

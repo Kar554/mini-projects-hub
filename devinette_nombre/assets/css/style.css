@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url("./../image/pexels-ahmetkurt-27219391.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-content{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+    background: rgba(73, 72, 72, 0.24);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    height: 40%;
+    border-radius: 20px;
+
+}
+.champ{
+    display: flex;
+    /* border: 1px solid blue; */
+   margin-top: 20px;
+   
+    
+}
+@keyframes retracte {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+input{
+    border-top-left-radius: 20px;
+    border: none;
+    outline: none;
+    animation: retracte 2.3s ease-in;
+}
+button{
+    padding: 15px;
+    background: blue;
+    color: white;
+    cursor: pointer;
+    border: none;
+
+
+}
+.btn-verifie{
+    border-bottom-right-radius: 20px;
+    
+}
+.succes{
+    background: rgba(0, 0, 0, 0.568);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.overflow{
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    padding: 20px;
+    height: 40%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: scal 1.3s ease-in-out;
+    
+}
+@keyframes scal {
+    from{
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.again{
+    margin-top: 20px;
+    
+}
+
+/* responsive pour mobile et tablette */
+@media (max-width:768px) {
+    .form-content , .overflow{
+        max-width: 330px;
+        height: 30%;
+    }
+    .form-content h2{
+        font-size: 15px;
+    }
+}
+
+/* responsive pour ecran de 800px */
+@media (min-width:800px) {
+   .form-content,.overflow{
+
+ max-width: 550px;
+}
+input{
+    padding:25px 50px;
+}
+}
