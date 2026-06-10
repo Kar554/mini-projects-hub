@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de quiz</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(190deg,blue,black);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+.zip-splash{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* panneaux */
+.zip{
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    transition: transform 1.2s cubic-bezier(.77,0,.18,1);
+}
+
+/* TEXTE CENTRÉ */
+.zip-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: #111;
+    text-align: center;
+    transition: opacity 0.8s ease;
+}
+
+/* cacher texte */
+.zip-splash.hide-text .zip-text{
+    opacity: 0;
+}
+
+/* ouvrir panneaux */
+.zip-splash.open .left{
+    transform: translateX(-100%);
+}
+.zip-splash.open .right{
+    transform: translateX(100%);
+}
+
+/* contenu */
+.app{
+    opacity: 0;
+    transform: scale(.97);
+    transition: 0.6s ease;
+}
+
+.app.show{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+        .form-cart{
+            width: 100%;
+            max-width: 500px;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 0 15px  black;
+        }
+        .form-cart h1{
+            color: rgb(4, 4, 97);
+            padding-bottom: 10px;
+            text-align: center;
+            border-bottom: 2px solid blue;
+        }
+        .form-cart h2{
+            color: rgb(4, 4, 97);
+        }
+        .responses{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .response{
+            border: 1px solid gray;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 15px;
+            box-shadow: 0 0 3px gray;
+            background: #f9f9f9;
+            width: 100%;
+            transition: all 0.6s;
+        }
+        .response:hover{
+            background: #eeebeb;
+            box-shadow: 0 0 0;
+        }
+        .response.success{
+            background: rgb(47, 189, 47);
+            border-color: green;
+            animation: fadeIn 0.3s ease-in;
+            color: white;
+            border: none;
+            opacity: 1;
+        }
+       @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+        .response.echec{
+            color: white;
+            background: rgb(221, 113, 113);
+            border-color: red;
+            animation: transform 0.2s ease-in-out;
+        }
+        @keyframes transform {
+            0%{
+                transform: translateX(0);
+            }
+            25%{
+                transform: translateX(-5px);
+
+            }
+            50%{
+                transform: translateX(5px);
+            }
+            75%{
+                transform: translateX(-5px);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+        .but-content{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            
+        }
+        .form-cart button{
+            cursor: pointer;
+            background: blue;
+            padding: 15px;
+            width: 60%;
+            border-radius: 15px;
+            border: none;
+            color: white;
+        }
+        @media (max-width:768px) {
+            .form-cart{
+                max-width: 350px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="zip-splash" id="zip">
+    <div class="zip left"></div>
+    <div class="zip right"></div>
+    <div class="zip-text">
+        <span>Desmond</span> - <span>Dev</span>
+    </div>
+</div>
+
+<main class="app" id="app">
+    <div class="form-cart">
+        <h1>Simple quiz</h1>
+        <div class="question">
+            <h2></h2>
+        </div>
+        <div class="responses">
+            <div class="response"></div>
+            <div class="response"></div>
+            <div class="response"></div>
+            <div class="response "></div>
+        </div>
+        <div class="but-content">
+            
+            <button onclick="next()">Next</button>
+        </div>
+    </div>
+    </main>
+<script src="./script_quiz.js"></script>
+</body>
+</html>
