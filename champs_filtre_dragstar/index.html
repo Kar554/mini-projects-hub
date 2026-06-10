@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de recherche</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <div class="logo">Shop</div>
+                <div class="hamburger" onclick="openMenu()" id="menu">
+                    <svg viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2 12.32H22" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M2 18.32H22" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M2 6.32001H22" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </div>
+                <div class="fermer" onclick="closeMenu()" id="fermer">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" fill="#0F0F0F"></path> </g></svg>
+                </div>
+            </div>
+                <ul class="desktop">
+                <li><a href="#" class="active">Accueil</a></li>
+                <li><a href="#">A propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="flex">
+                <div class="search" id="icon-search" onclick="recherche()">
+                    <div class="search-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></div>
+                </div>
+                <button class="connectedBtn">Se connecter</button>
+                <div class="pannier desktop"><svg fill="Currentcolor" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M1015.66 284a31.82 31.82 0 0 0-25.998-13.502H310.526l-51.408-177.28c-20.16-69.808-68.065-77.344-87.713-77.344H34.333c-17.569 0-31.777 14.224-31.777 31.776S16.78 79.425 34.332 79.425h137.056c4.336 0 17.568 0 26.593 31.184l176.848 649.936c3.84 13.712 16.336 23.183 30.591 23.183h431.968c13.409 0 25.376-8.4 29.905-21.024l152.256-449.68c3.504-9.744 2.048-20.592-3.888-29.024zM815.026 720.194H429.539L328.387 334.066h616.096zM752.003 848.13c-44.192 0-80 35.808-80 80s35.808 80 80 80 80-35.808 80-80-35.808-80-80-80zm-288 0c-44.192 0-80 35.808-80 80s35.808 80 80 80 80-35.808 80-80-35.808-80-80-80z"></path></g></svg>
+                </div>
+                <div class="badge">0</div>
+                <div class="mobile" title="Voir le pannier" onclick="mobilePannier()"><svg fill="Currentcolor" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M1015.66 284a31.82 31.82 0 0 0-25.998-13.502H310.526l-51.408-177.28c-20.16-69.808-68.065-77.344-87.713-77.344H34.333c-17.569 0-31.777 14.224-31.777 31.776S16.78 79.425 34.332 79.425h137.056c4.336 0 17.568 0 26.593 31.184l176.848 649.936c3.84 13.712 16.336 23.183 30.591 23.183h431.968c13.409 0 25.376-8.4 29.905-21.024l152.256-449.68c3.504-9.744 2.048-20.592-3.888-29.024zM815.026 720.194H429.539L328.387 334.066h616.096zM752.003 848.13c-44.192 0-80 35.808-80 80s35.808 80 80 80 80-35.808 80-80-35.808-80-80-80zm-288 0c-44.192 0-80 35.808-80 80s35.808 80 80 80 80-35.808 80-80-35.808-80-80-80z"></path></g></svg>
+            </div>
+        </nav>
+    </header>
+    <div class="search-bar">
+        <input type="search" id="searchInput">
+        <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </div>
+    </div>
+    <p id="message"></p>
+    <div class="row">
+    <section class="produit">
+        <h1 class="produitTitle">Nos produits</h1>
+        <div class="form-card">
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future1.png" alt="">
+        <p>Kawasaki Ninja</p>
+        <span>4500 $</span>
+        <button onclick="addpannier('1')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future2.png" alt="">
+        <p>Yamaha R1</p>
+        <span>5200 $</span>
+        <button onclick="addpannier('2')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future3.png" alt="">
+        <p>Ducati Monster</p>
+        <span>6100 $</span>
+        <button onclick="addpannier('3')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future4.png" alt="">
+        <p>Honda CBR</p>
+        <span>4800 $</span>
+        <button onclick="addpannier('4')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future5.png" alt="">
+        <p>Suzuki GSX</p>
+        <span>5300 $</span>
+        <button onclick="addpannier('5')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future6.png" alt="">
+        <p>BMW S1000RR</p>
+        <span>8900 $</span>
+        <button onclick="addpannier('6')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future7.png" alt="">
+        <p>Aprilia RSV4</p>
+        <span>7500 $</span>
+        <button onclick="addpannier('7')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future8.png" alt="">
+        <p>KTM Duke</p>
+        <span>4200 $</span>
+        <button onclick="addpannier('8')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future9.png" alt="">
+        <p>Triumph Speed Triple</p>
+        <span>6700 $</span>
+        <button onclick="addpannier('9')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future10.png" alt="">
+        <p>Harley Davidson</p>
+        <span>9500 $</span>
+        <button onclick="addpannier('10')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future11.png" alt="">
+        <p>Casque Shark</p>
+        <span>300 $</span>
+        <button onclick="addpannier('11')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future12.png" alt="">
+        <p>Gants Racing</p>
+        <span>120 $</span>
+        <button onclick="addpannier('12')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future13.png" alt="">
+        <p>Blouson Cuir</p>
+        <span>450 $</span>
+        <button onclick="addpannier('13')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future14.png" alt="">
+        <p>Chaussures Moto</p>
+        <span>200 $</span>
+        <button onclick="addpannier('14')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future15.png" alt="">
+        <p>Honda Civic Sport</p>
+        <span>15000 $</span>
+        <button onclick="addpannier('15')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future16.png" alt="">
+        <p>Tesla Model 3</p>
+        <span>35000 $</span>
+        <button onclick="addpannier('16')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future17.png" alt="">
+        <p>Mercedes AMG</p>
+        <span>65000 $</span>
+        <button onclick="addpannier('17')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future18.png" alt="">
+        <p>Audi RS7</p>
+        <span>72000 $</span>
+        <button onclick="addpannier('18')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future19.png" alt="">
+        <p>Lamborghini Huracán</p>
+        <span>210000 $</span>
+        <button onclick="addpannier('19')">Ajouter au panier</button>
+    </div>
+    <div class="card">
+        <img src="../carrousel_page/assets/image/voiture/future20.png" alt="">
+        <p>Ferrari F8</p>
+        <span>250000 $</span>
+        <button onclick="addpannier('20')">Ajouter au panier</button>
+    </div>
+</div>
+
+    </section>
+
+    <section class="dragstar">
+        <h1 class="titlepannier">Pannier</h1>
+        <p id="nbrAchat"></p>
+        <p id="prixtotal"></p>
+        <div class="form-pannier">
+          
+        </div>
+    </section>
+
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
